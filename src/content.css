@@ -1,0 +1,49 @@
+/* DimWit: Replace X's Lights Out (#000) with Dim (#15202B) */
+
+/* Main background — html needed because color-scheme:dark makes the canvas black */
+html,
+body,
+#react-root,
+[data-testid="primaryColumn"],
+[data-testid="sidebarColumn"],
+main,
+[style*="background-color: rgb(0, 0, 0)"] {
+    background-color: #15202B !important;
+}
+
+/* Elevated surfaces (cards, menus, dropdowns) */
+[data-testid="Dropdown"],
+[data-testid="sheetDialog"],
+[data-testid="mask"],
+[role="dialog"],
+[role="menu"],
+[role="listbox"],
+[style*="background-color: rgb(22, 24, 28)"] {
+    background-color: #1A2734 !important;
+}
+
+/* Hover states */
+[style*="background-color: rgb(29, 31, 35)"] {
+    background-color: #1E2D3D !important;
+}
+
+/* Borders and dividers */
+[style*="border-color: rgb(47, 51, 54)"] {
+    border-color: #38444D !important;
+}
+
+/* Input fields, search bar */
+[data-testid="SearchBox_Search_Input"],
+[style*="background-color: rgb(32, 35, 39)"] {
+    background-color: #253341 !important;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #15202B !important;
+}
+
+/* Color scheme hint for browser chrome */
+:root {
+    color-scheme: dark !important;
+}
