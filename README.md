@@ -2,6 +2,8 @@
 
 Chrome extension that brings back X's Dim dark mode (#15202B) by replacing the Lights Out pure black theme.
 
+![DimWit Screenshot](Screenshot.png)
+
 ## Install from Chrome Web Store
 
 The extension is currently in review. The Web Store link will be posted here once it's approved.
