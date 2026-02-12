@@ -38,9 +38,9 @@ main,
     background-color: #253341 !important;
 }
 
-/* Scrollbar track */
-::-webkit-scrollbar-track {
-    background-color: #15202B !important;
+/* Scrollbar colors (thumb, track) */
+* {
+    scrollbar-color: #38444D #15202B;
 }
 
 /* Color scheme hint for browser chrome */

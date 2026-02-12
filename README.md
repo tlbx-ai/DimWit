@@ -1,19 +1,19 @@
-# DimWit
+# DimWit (Firefox)
 
-Chrome extension that brings back X's Dim dark mode (#15202B) by replacing the Lights Out pure black theme.
+Firefox extension that brings back X's Dim dark mode (#15202B) by replacing the Lights Out pure black theme.
 
 ![DimWit Screenshot](Screenshot.png)
 
-## Install from Chrome Web Store
+## Install from Firefox Add-ons
 
-The extension is currently in review. The Web Store link will be posted here once it's approved.
+The extension is currently in review. The AMO link will be posted here once it's approved.
 
 ## Install manually
 
 1. Clone or download this repo
-2. Open `chrome://extensions`
-3. Enable **Developer mode**
-4. Click **Load unpacked** and select the `src/` folder
+2. Open `about:debugging#/runtime/this-firefox`
+3. Click **Load Temporary Add-on**
+4. Select `src/manifest.json`
 
 ## How it works
 
@@ -29,7 +29,7 @@ DimWit uses CSS overrides and a lightweight MutationObserver to replace Lights O
 
 CSS handles static styles, the MutationObserver catches dynamically injected inline styles as X loads content.
 
-## Chrome Web Store publishing
+## Firefox Add-ons publishing
 
 The GitHub Actions workflow (`.github/workflows/publish.yml`) publishes automatically when you push a `v*` tag.
 
@@ -37,10 +37,8 @@ Required GitHub secrets:
 
 | Secret | Source |
 |---|---|
-| `EXTENSION_ID` | Chrome Web Store dashboard |
-| `CLIENT_ID` | Google Cloud Console → OAuth 2.0 |
-| `CLIENT_SECRET` | Google Cloud Console → OAuth 2.0 |
-| `REFRESH_TOKEN` | OAuth flow via `chrome-webstore-upload-cli` |
+| `WEB_EXT_API_KEY` | AMO → Developer Hub → Manage API Keys |
+| `WEB_EXT_API_SECRET` | AMO → Developer Hub → Manage API Keys |
 
 ## License
 

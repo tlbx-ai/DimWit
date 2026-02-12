@@ -3,6 +3,12 @@
     "name": "DimWit",
     "version": "1.0.0",
     "description": "Brings back X's Dim dark mode (#15202B) by replacing the Lights Out black theme.",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "dimwit@johannordin",
+            "strict_min_version": "109.0"
+        }
+    },
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
