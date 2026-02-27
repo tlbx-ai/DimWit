@@ -13,9 +13,8 @@
         if (!rule.style) return;
         for (const prop of colorProps) {
             const val = rule.style[prop];
-            if (val && colorMap[val]) {
-                rule.style[prop] = colorMap[val];
-            }
+            const mapped = mapColor(val);
+            if (mapped) rule.style[prop] = mapped;
         }
     }
 
@@ -34,13 +33,19 @@
         }
     }
 
+    function mapColor(val) {
+        if (colorMap[val]) return colorMap[val];
+        const m = val && val.match(/^rgba\(\s*0,\s*0,\s*0,\s*([\d.]+)\s*\)$/);
+        if (m) return `rgba(21, 32, 43, ${m[1]})`;
+        return null;
+    }
+
     function patchInline(el) {
         if (el.nodeType !== Node.ELEMENT_NODE) return;
         for (const prop of colorProps) {
             const val = el.style[prop];
-            if (val && colorMap[val]) {
-                el.style[prop] = colorMap[val];
-            }
+            const mapped = mapColor(val);
+            if (mapped) el.style[prop] = mapped;
         }
     }
 

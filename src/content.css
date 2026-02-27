@@ -7,7 +7,9 @@ body,
 [data-testid="primaryColumn"],
 [data-testid="sidebarColumn"],
 main,
-[style*="background-color: rgb(0, 0, 0)"] {
+header,
+[style*="background-color: rgb(0, 0, 0)"],
+[style*="background-color: rgba(0, 0, 0"] {
     background-color: #15202B !important;
 }
 
@@ -32,8 +34,10 @@ main,
     border-color: #38444D !important;
 }
 
-/* Input fields, search bar */
-[data-testid="SearchBox_Search_Input"],
+/* Search bar — input must be transparent so the rounded container clips cleanly */
+[data-testid="SearchBox_Search_Input"] {
+    background-color: transparent !important;
+}
 [style*="background-color: rgb(32, 35, 39)"] {
     background-color: #253341 !important;
 }
