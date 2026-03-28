@@ -6,7 +6,8 @@ Chrome extension that brings back X's Dim dark mode (#15202B) by replacing the L
 
 ## Install from Chrome Web Store
 
-The extension is currently in review. The Web Store link will be posted here once it's approved.
+Here it is: https://chromewebstore.google.com/detail/dim-mode-on-x-grokipedia/dofhdndlcebmacdidimdjaomdjlbgmjj
+
 
 ## Install manually
 
